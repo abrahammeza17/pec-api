@@ -1,0 +1,35 @@
+### Obtener todos los productos
+GET http://localhost:3000/api/products
+
+### Obtener un producto por ID
+GET http://localhost:3000/api/products/672b00000000000000000001
+
+### Crear un producto
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "name": "Chaqueta vaquera de prueba",
+    "description": "Chaqueta de segunda mano para pruebas de REWEAR",
+    "price": 20,
+    "size": "M",
+    "category": "Chaquetas",
+    "condition": "Bueno",
+    "image": "https://example.com/chaqueta.jpg",
+    "userId": "672a00000000000000000001",
+    "available": true
+}
+
+### Actualizar un producto
+PUT http://localhost:3000/api/products/6b04a2dc4086096d61ab1601
+Content-Type: application/json
+
+{
+    "price": 18
+}
+
+### Eliminar un producto
+DELETE http://localhost:3000/api/products/6b04a3494086096d61ab1602
+
+### Comprobar ruta inexistente
+GET http://localhost:3000/api/ruta-inventada
